@@ -43,7 +43,7 @@ public class UserDAO {
 		return -2; // 데이터베이스 오류
 	}
 	public int join(User user) {
-		String SQL = "INSERT INTO USER VALUES(?, ?, ?, ?, ?)";
+		String SQL = "INSERT INTO USER VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		Date date = new Date(user.getYear()-1900, user.getMonth(), user.getDay());
 		Timestamp birthdate = new Timestamp(date.getTime());
 		
