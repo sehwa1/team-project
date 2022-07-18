@@ -1,0 +1,311 @@
+@charset "UTF-8";
+.mainBody {
+    height: 200vh;
+    background-color: #030B1A;
+}
+
+.header {
+    width: 100%;
+    height: 8%;
+    position: fixed;
+    top: 0%;
+    background: linear-gradient(to right, #30cfd0, #330867);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo {
+    margin-left: 15px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.login {
+    width: 100px;
+    height: 50px;
+    margin-right: 15px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    font-size: large;
+}
+
+
+
+.login:hover {
+    color: #60FFFA;
+}
+
+.loginBtn {
+    font-size: large;
+}
+
+.join {
+    width: 100px;
+    height: 50px;
+    margin-right: 10px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    font-size: large;
+}
+
+.join:hover {
+    color: #FA85F6;
+}
+
+.J-form {
+    width: 40%;
+}
+
+.joinPart {
+    display: flex;
+    padding-top: 10%;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.joinTxt {
+    font-size: 4em;
+    padding-bottom: 10%;
+}
+
+.inputBox {
+    position: relative;
+    margin: 10px 0;
+}
+
+.joinForm {
+    height: 3em;
+    margin-bottom: 3%;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #ccc;
+    padding: 20px 0px 5px 0px;
+    width: 100%;
+    font-size: x-large;
+}
+
+.joinForm:focus + label, label {
+    color: #2C3987;
+    font-size: medium;
+    pointer-events: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.joinForm:focus,
+.joinForm:not(:placeholder-shown) {
+    border-bottom: solid 1px #2C3987;
+    outline: none;
+}
+
+.joinForm::placeholder {
+    color: #929CAD;
+}
+
+.inputBox2 {
+    position: relative;
+    margin: 10px 0;
+}
+
+.year {
+    height: 2.3em;
+    margin: 5% 2% 3% 0%;
+    background: transparent;
+    border: solid 1px #2C3987;
+    border-radius: 5px;
+    width: 50%;
+    font-size: x-large;
+}
+
+.month {
+    height: 2.3em;
+    margin: 5% 2% 3% 0%;
+    background: transparent;
+    border: solid 1px #2C3987;
+    border-radius: 5px;
+    width: 21.7%;
+    font-size: x-large;
+}
+
+.day {
+    height: 2.3em;
+    margin: 5% 0% 3% 0%;
+    background: transparent;
+    border: solid 1px #2C3987;
+    border-radius: 5px;
+    width: 21.7%;
+    font-size: x-large;
+}
+
+.year::placeholder,
+.month::placeholder,
+.day::placeholder {
+    padding-left: 3%;
+}
+
+.nation {
+    width: 100%;
+    height: 2em;
+    font-size: large;
+    border-radius: 5px;
+}
+
+.phone {
+    height: 2.3em;
+    font-size: x-large;
+    background: transparent;
+    margin: 3% 2% 3% 0%;
+    width: 85%;
+    border: solid 1px #2C3987;
+    border-radius: 5px;
+}
+
+.phone::placeholder {
+    padding-left: 2%;
+}
+
+.btn {
+    background-color: #5A8BBD;
+    color: white;
+    font-size:large;
+    height: 2.3em;
+    width: 12%;
+    border-radius: 13px;
+    border: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+     transition: all 0.5s;
+}
+
+.btn:hover {
+    color: #5A8BBD;
+    background-color: white;
+    border: solid 1px #5A8BBD;
+     transition: all 0.5s;
+}
+
+.subBtn {
+    place-items: center;
+    display: block;
+    font-size: xx-large;
+    width: 40%;
+    margin: 20% auto 0 auto;
+}
+
+.embed-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 50%;
+}
+
+.bottom {
+    height: 30%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    padding-top: 5%;
+    height: 40%;
+}
+
+.video {
+    margin: 30px auto;
+    border-radius: 30px;
+    background-color: #C5C3C7;
+    padding: 40px;
+    width: 70%;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2%;
+}
+
+.searchBar {
+    width: 73%;
+    height: 50px;
+    border-radius: 50px;
+    border: 0.3ch solid lightslategrey;
+    font-family: 'Roboto';
+    font-size: large;
+    background-image: url('../imgs/search.png');
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 97% center;
+}
+
+.login[type=text],
+.join[type-text] {
+    padding-left: 25px;
+}
+
+.boxoffice {
+    display: flex;
+    height: 30%;
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    left: 400px;
+    animation: slide 1s ease-out;
+}
+
+@keyframes slide {
+    from {
+        left: -200px
+    }
+    to {
+        left: 400px
+    }
+}
+
+.content {
+    height: 50%;
+}
+
+.footer {
+    height: 10%;
+    background-color: #344157;
+}
+
+footer {
+    height: 30%;
+}
+
+.littleContainer{
+padding-top: 12px;
+height: 30px;
+width: 50vw;
+font-size:13px;
+display:flex;
+justify-content: space-between;
+}
+
+
+/* 여기 */
