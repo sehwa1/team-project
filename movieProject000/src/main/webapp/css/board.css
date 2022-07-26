@@ -1,0 +1,56 @@
+@charset "UTF-8";
+​
+.header {
+    width: 100%;
+    height: 8%;
+    position: fixed;
+    top: 0%;
+    background: linear-gradient(to right, #30cfd0, #330867);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+​
+.logo {
+    margin-left: 15px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+​
+.login {
+    width: 100px;
+    height: 50px;
+    margin-right: 15px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    font-size: large;
+}
+​
+.login:hover {
+    color: #60FFFA;
+}
+​
+.join {
+    width: 100px;
+    height: 50px;
+    margin-right: 10px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    font-size: large;
+}
+​
+.join:hover {
+    color: #FA85F6;
+}
