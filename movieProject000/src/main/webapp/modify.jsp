@@ -58,31 +58,34 @@
                 <label for="userEmail">e-mail</label>
             </div>
             <div class="inputBox2 inputBox">
-                <input class="year" name="year" type="text" pattern="[0-9]{4}" title="#### 출생연도 4자리를 입력해주세요." placeholder="연도(4글자)">
+            <%
+            String arr[] = vec.get(0).getBirthdate().split("-");
+            %>
+                <input class="year" name="year" type="text" pattern="[0-9]{4}" title="#### 출생연도 4자리를 입력해주세요." value="<%=arr[0] %>">
                 <label for="year">생년월일</label>
-                <input class="month" name="month" type="number" min="1" max="12" placeholder="월">
-                <input class="day" name="day" type="number" min="1" max="31" placeholder="일">
+                <input class="month" name="month" type="number" min="1" max="12" value="<%=arr[1] %>">
+                <input class="day" name="day" type="number" min="1" max="31" value="<%=arr[2] %>">
             </div>
             <div class="inputBox2">
-                <select class="nation" value="<%=vec.get(0).getCountry() %>" name="country">
-                    <option value="kor">대한민국 +82</option>
-                    <option value="duch">네덜란드 +31</option>
-                    <option value="ger">독일 +49</option>
-                    <option value="rus">러시아 +7</option>
-                    <option value="usa">미국 +1</option>
-                    <option value="viet">베트남 +84</option>
-                    <option value="swiss">스위스 +41</option>
-                    <option value="spain">스페인 +34</option>
-                    <option value="uk">영국 +44</option>
-                    <option value="ost">오스트레일리아 +61</option>
-                    <option value="jap">일본 +81</option>
-                    <option value="china">중국 +86</option>
-                    <option value="czech">체코 +420</option>
-                    <option value="canada">캐나다 +1</option>
-                    <option value="thai">태국 +66</option>
-                    <option value="pol">폴란드 +48</option>
-                    <option value="france">프랑스 +33</option>
-                    <option value="phil">필리핀 +63</option>
+                <select class="nation"  name="country">
+                    <option value="kor" <%if(vec.get(0).getCountry().equals("kor")){ %>selected<%}%>>대한민국 +82</option>
+                    <option value="duch" <%if(vec.get(0).getCountry().equals("duch")){ %>selected<%}%>>네덜란드 +31</option>
+                    <option value="ger" <%if(vec.get(0).getCountry().equals("ger")){ %>selected<%}%>>독일 +49</option>
+                    <option value="rus" <%if(vec.get(0).getCountry().equals("rus")){ %>selected<%}%>>러시아 +7</option>
+                    <option value="usa" <%if(vec.get(0).getCountry().equals("usa")){ %>selected<%}%>>미국 +1</option>
+                    <option value="viet" <%if(vec.get(0).getCountry().equals("vied")){ %>selected<%}%>>베트남 +84</option>
+                    <option value="swiss" <%if(vec.get(0).getCountry().equals("siwss")){ %>selected<%}%>>스위스 +41</option>
+                    <option value="spain" <%if(vec.get(0).getCountry().equals("spain")){ %>selected<%}%>>스페인 +34</option>
+                    <option value="uk" <%if(vec.get(0).getCountry().equals("uk")){ %>selected<%}%>>영국 +44</option>
+                    <option value="ost" <%if(vec.get(0).getCountry().equals("ost")){ %>selected<%}%>>오스트레일리아 +61</option>
+                    <option value="jap" <%if(vec.get(0).getCountry().equals("jap")){ %>selected<%}%>>일본 +81</option>
+                    <option value="china" <%if(vec.get(0).getCountry().equals("china")){ %>selected<%}%>>중국 +86</option>
+                    <option value="czech" <%if(vec.get(0).getCountry().equals("czech")){ %>selected<%}%>>체코 +420</option>
+                    <option value="canada" <%if(vec.get(0).getCountry().equals("canada")){ %>selected<%}%>>캐나다 +1</option>
+                    <option value="thai" <%if(vec.get(0).getCountry().equals("thai")){ %>selected<%}%>>태국 +66</option>
+                    <option value="pol" <%if(vec.get(0).getCountry().equals("pol")){ %>selected<%}%>>폴란드 +48</option>
+                    <option value="france" <%if(vec.get(0).getCountry().equals("france")){ %>selected<%}%>>프랑스 +33</option>
+                    <option value="phil" <%if(vec.get(0).getCountry().equals("phil")){ %>selected<%}%>>필리핀 +63</option>
                 </select>
             </div>
             <div class="inputBox2">

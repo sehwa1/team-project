@@ -10,7 +10,7 @@
 <div>
 	<jsp:include page="header.jsp"></jsp:include>
 </div>
-	<div class="mypage" style="margin-top: 100px">
+	<div class="mypage" style="margin-top: 150px">
 	<h1>MyPage</h1><br>
 	<a href = modify.jsp>회원정보수정</a>
 	</div>
