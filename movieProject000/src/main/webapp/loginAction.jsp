@@ -36,8 +36,8 @@
 		int result = dao.login(user.getUserID(), user.getUserPassword());
 		if (result == 1){
 			
-	
 	session.setAttribute("userID", user.getUserID());
+	/*
 	session.setAttribute("userPassword", user.getUserPassword());
 	session.setAttribute("userName", user.getUserName());
 	session.setAttribute("userGender", user.getUserGender());
@@ -49,6 +49,7 @@
 	session.setAttribute("month", user.getMonth());
 	session.setAttribute("day", user.getDay());
 	System.out.println(session.getAttribute("userName"));
+	*/
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('로그인 성공')");

@@ -65,6 +65,7 @@
                 <label for="year">생년월일</label>
                 <input class="month" name="month" type="number" min="1" max="12" value="<%=arr[1] %>">
                 <input class="day" name="day" type="number" min="1" max="31" value="<%=arr[2] %>">
+           
             </div>
             <div class="inputBox2">
                 <select class="nation"  name="country">

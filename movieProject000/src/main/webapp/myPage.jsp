@@ -13,6 +13,7 @@
 	<div class="mypage" style="margin-top: 150px">
 	<h1>MyPage</h1><br>
 	<a href = modify.jsp>회원정보수정</a>
+	<a href = delete.jsp>회원탈퇴</a>
 	</div>
 </body>
 </html>

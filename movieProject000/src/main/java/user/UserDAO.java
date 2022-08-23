@@ -179,8 +179,7 @@ public class UserDAO {
 	
 	public int modify(User user) {
 		String SQL = "UPDATE user SET userId=?, userPassword=?, userName=?, userGender=?, userEmail=?, birthdate=?, nickname=?, country=?, mobile=? where userID=?";
-//		Date date = new Date(user.getYear()-1900, user.getMonth()-1, user.getDay());
-//		Timestamp birthdate = new Timestamp(date.getTime());
+		user.setBirthdate(user.getYear() + "-" +  user.getMonth() + "-" +  user.getDay());
 		
 		try {
 			pstmt = conn.prepareStatement(SQL);
@@ -196,7 +195,7 @@ public class UserDAO {
 			pstmt.setString(9, user.getMobile());
 			pstmt.setString(10, user.getUserID());
 			System.out.println("회원정보수정 완료");
-			return pstmt.executeUpdate();	// 리턴값 9
+			return pstmt.executeUpdate();	
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("입력오류");
@@ -204,5 +203,48 @@ public class UserDAO {
 		}
 	}
 	
+	public int delete(String userID, String userPassword) {
+		
+		String SQL = "select userPassword from user where userID = ?";
+
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, userID);
+			rs = pstmt.executeQuery();
+			System.out.println(rs);
+			if (rs.next()) {
+				
+				// 확인용 
+				System.out.println(userID);
+				System.out.println(rs.getString(1));
+				System.out.println(userPassword);
+				
+				if (rs.getString(1).equals(userPassword)) {
+					System.out.println("굿");
+					String sql2 = "DELETE FROM user WHERE userID = ?";
+					pstmt = conn.prepareStatement(sql2);
+					pstmt.setString(1, userID);
+//					rs = pstmt.executeQuery();
+					int num = pstmt.executeUpdate();
+					System.out.println(num);
+					
+					System.out.println(rs);
+					System.out.println("회원탈퇴 성공");
+					return 1; // 탈퇴 성공
+				} else {
+					System.out.println("비밀번호 불일치");
+					return 0; // 비밀번호 불일치		
+				}
+			}
+			else {
+				return -1;  // 아이디 존재x  (불가능)
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("DB연동 오류 회원탈퇴 실패");
+			return -2; // 데이터베이스 오류
+		}
+	}
 	
 }
